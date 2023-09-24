@@ -1,0 +1,29 @@
+version: '3.4'
+    
+services:
+  
+  app1:
+    container_name: "application_api1"
+    build:
+      context: ./
+    ports:
+      - "80:80"
+    environment:
+      RabbitMq__Host: hybridlog.io
+      IMAGE: registry.kube.io/projects/645/application_api1:v1
+      BRANCH: develop
+      SERVICE_NAMESPACE: devops
+      OS_VERSION: 2010
+      CRM_KEY: HW-510
+      OS_NAME: windows
+      SUBDOMAIN: application_api1.localhost
+      HOST_TYPE: arm64
+      PROJECT_NAME: application_api1
+      PROJECT_VERSION: v1
+      HOST_ID: localhostId
+      HOST_NAME: localhost
+      TEMPLATE_NAME: dotnetcore6
+      JIRA_PROJECT_ID: 644
+      STAGE: production
+      TEAM_NAME: web_backend
+      App3Endpoint: http://172.16.58.71:5001/dummy
